@@ -22,7 +22,7 @@ export default function Home() {
 	}, []);
 
 	return (
-		<div>
+		<div class="flex flex-col justify-center align-center w-full">
 			<p>Generation: {status.generation}</p>
 			<p>Alive cells: {status.aliveCells}</p>
 			<p>Max population: {status.maxPopulation}</p>
@@ -30,7 +30,7 @@ export default function Home() {
 				Generation with max population: {status.generationWithMaxPopulation}
 			</p>
 			<p>Total cells: {status.totalCells}</p>
-			<canvas ref={canvasRef} />
+			<canvas ref={canvasRef} className="w-half" />
 		</div>
 	);
 }
