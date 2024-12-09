@@ -63,4 +63,8 @@ export default class Universe {
 		}
 		this.cells = clonedCells;
 	}
+
+	public get getCells() {
+		return this.cells;
+	}
 }
