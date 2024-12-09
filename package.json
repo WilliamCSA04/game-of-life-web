@@ -8,6 +8,7 @@
     "preview": "rsbuild preview"
   },
   "dependencies": {
+    "@tanstack/react-router": "^1.87.2",
     "preact": "^10.25.1"
   },
   "devDependencies": {
