@@ -45,6 +45,6 @@ export default class Engine {
 		setInterval(() => {
 			statsFn(this.universe.stats());
 			this.update();
-		}, 1000 / 30);
+		}, 1000 / 15);
 	}
 }

@@ -60,17 +60,10 @@ export default class Universe {
 			for (const dy of deltas) {
 				if (dx === 0 && dy === 0) continue;
 
-				const neighborX = x + dx;
-				const neighborY = y + dy;
+				const neighborX = (x + dx + this.width) % this.width;
+				const neighborY = (y + dy + this.height) % this.height;
 
-				if (
-					neighborX >= 0 &&
-					neighborX < this.width &&
-					neighborY >= 0 &&
-					neighborY < this.height
-				) {
-					neighbors.push(this.cells[neighborY * this.width + neighborX]);
-				}
+				neighbors.push(this.cells[neighborY * this.width + neighborX]);
 			}
 		}
 
