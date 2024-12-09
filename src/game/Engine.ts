@@ -1,4 +1,4 @@
-import Universe from "./Universe";
+import Universe, { type Status } from "./Universe";
 
 export default class Engine {
 	private static instance: Engine;
@@ -41,9 +41,10 @@ export default class Engine {
 		}
 	}
 
-	public start() {
+	public start(statsFn: (stats: Status) => unknown) {
 		setInterval(() => {
+			statsFn(this.universe.stats());
 			this.update();
-		}, 1000 / 60);
+		}, 1000 / 30);
 	}
 }
