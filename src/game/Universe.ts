@@ -21,7 +21,7 @@ export default class Universe {
 	) {
 		for (let y = 0; y < this.height; y++) {
 			for (let x = 0; x < this.width; x++) {
-				const startAlive = Math.random() < 0.75;
+				const startAlive = Math.random() < 0.5;
 				this.cells.push(new Cell(x, y, startAlive));
 			}
 		}
